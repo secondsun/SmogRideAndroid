@@ -11,5 +11,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_ride_list">Rides</string>
     <string name="title_ride_detail">Ride Detail</string>
+    <string name="title_activity_key_cloak_login">KeyCloakLoginActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

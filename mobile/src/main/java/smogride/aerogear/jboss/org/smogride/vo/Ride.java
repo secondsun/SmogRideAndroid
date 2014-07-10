@@ -3,6 +3,8 @@ package smogride.aerogear.jboss.org.smogride.vo;
 import org.jboss.aerogear.android.RecordId;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Ride implements Serializable {
@@ -69,14 +71,7 @@ public class Ride implements Serializable {
 
     @Override
     public String toString() {
-        return "Ride{" +
-                "id=" + id +
-                ", owner='" + owner + '\'' +
-                ", metersTravelled=" + metersTravelled +
-                ", duration=" + duration +
-                ", dateOfRide=" + dateOfRide +
-                ", version=" + version +
-                '}';
+        return metersTravelled + "m on " + SimpleDateFormat.getDateInstance(DateFormat.SHORT).format(dateOfRide);
     }
 }
 

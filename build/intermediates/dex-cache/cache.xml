@@ -8,6 +8,30 @@
         revision="20.0.0"
         sha1="80a6f6f2d0dfcfae8c424cf81dcdf7157e7bf4b8"/>
     <item
+        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/guava-17.0-68aada4b7c67d544dbb8045a8a273288799c495e.jar"
+        jar="/home/summers/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/17.0/9c6ef172e8de35fd8d4d8783e4821e57cdef7445/guava-17.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9c6ef172e8de35fd8d4d8783e4821e57cdef7445"/>
+    <item
+        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-b08bfde5635098476a12801e86eac3f740970599.jar"
+        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
+        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/classes-b3e27be64b3a3740f1387f34c8dc2508135ca335.jar"
+        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+    <item
+        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-448ef67bef28a51962a9c120ff9cfcc48bc6f249.jar"
+        jar="/home/summers/Programs/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+    <item
         dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/classes-97f76d3840e86664ad25759b48a16bc106384a67.jar"
         jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/org.jboss.aerogear/aerogear-android/1.4.0/classes.jar"
         jumboMode="false"
@@ -19,23 +43,5 @@
         jumboMode="false"
         revision="20.0.0"
         sha1="a60a5e993c98c864010053cb901b7eab25306568"/>
-    <item
-        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/classes-b3e27be64b3a3740f1387f34c8dc2508135ca335.jar"
-        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
-    <item
-        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-b08bfde5635098476a12801e86eac3f740970599.jar"
-        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
-    <item
-        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-448ef67bef28a51962a9c120ff9cfcc48bc6f249.jar"
-        jar="/home/summers/Programs/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
 
 </pre-dex-items>
