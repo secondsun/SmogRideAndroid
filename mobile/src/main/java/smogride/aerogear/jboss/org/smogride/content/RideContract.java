@@ -1,6 +1,10 @@
 package smogride.aerogear.jboss.org.smogride.content;
 
+import android.content.ContentValues;
 import android.net.Uri;
+
+import smogride.aerogear.jboss.org.smogride.util.GsonUtils;
+import smogride.aerogear.jboss.org.smogride.vo.Ride;
 
 /**
  * Created by summers on 7/5/14.
@@ -20,4 +24,12 @@ public class RideContract {
     }
 
 
+    public static ContentValues asValues(Ride ride) {
+        ContentValues cv = new ContentValues(2);
+        cv.put(DATA, GsonUtils.GSON.toJsonTree(ride).toString());
+        if (ride.getId() > 0) {
+            cv.put(ID, ride.getId());
+        }
+        return cv;
+    }
 }

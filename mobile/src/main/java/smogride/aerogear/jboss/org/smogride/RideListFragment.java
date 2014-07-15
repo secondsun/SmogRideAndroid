@@ -5,8 +5,11 @@ import android.app.ListFragment;
 import android.app.LoaderManager;
 import android.content.CursorLoader;
 import android.content.Loader;
+import android.database.ContentObserver;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -47,6 +50,7 @@ public class RideListFragment extends ListFragment implements LoaderManager.Load
      */
     private int mActivatedPosition = ListView.INVALID_POSITION;
     private List<Ride> mRides = new ArrayList<Ride>();
+    private ContentObserver observer;
 
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
@@ -106,6 +110,13 @@ public class RideListFragment extends ListFragment implements LoaderManager.Load
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        observer= new ContentObserver(new Handler(Looper.myLooper())) {
+            @Override
+            public void onChange(boolean selfChange) {
+                getLoaderManager().restartLoader(0, null, RideListFragment.this).startLoading();
+            }
+        };
+
         // TODO: replace with a real list adapter.
         setListAdapter(new ArrayAdapter<Ride>(
                 getActivity(),
@@ -141,6 +152,7 @@ public class RideListFragment extends ListFragment implements LoaderManager.Load
     @Override
     public void onResume() {
         super.onResume();
+        getActivity().getContentResolver().registerContentObserver(RideContract.URI, false, observer);
         getLoaderManager().initLoader(0, null, this);
     }
 
@@ -150,6 +162,12 @@ public class RideListFragment extends ListFragment implements LoaderManager.Load
 
         // Reset the active callbacks interface to the dummy implementation.
         mCallbacks = sDummyCallbacks;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        getActivity().getContentResolver().unregisterContentObserver(observer);
     }
 
     @Override

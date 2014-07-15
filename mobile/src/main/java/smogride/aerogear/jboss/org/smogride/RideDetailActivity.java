@@ -1,5 +1,6 @@
 package smogride.aerogear.jboss.org.smogride;
 
+import android.accounts.AccountManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +24,8 @@ public class RideDetailActivity extends Activity {
 
         // Show the Up button in the action bar.
         getActionBar().setDisplayHomeAsUpEnabled(true);
+
+        getContentResolver().requestSync(AccountManager.get(this).getAccounts()[0], "smogride.rides", null);
 
         // savedInstanceState is non-null when there is fragment state
         // saved from previous configurations of this activity

@@ -73,5 +73,6 @@ public class Ride implements Serializable {
     public String toString() {
         return metersTravelled + "m on " + SimpleDateFormat.getDateInstance(DateFormat.SHORT).format(dateOfRide);
     }
+
 }
 

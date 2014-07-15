@@ -30,12 +30,17 @@
         <activity
             android:name=".RideListActivity"
             android:label="@string/title_ride_list" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".RideDetailActivity"
             android:label="@string/title_ride_detail"
             android:parentActivityName=".RideListActivity" >
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="smogride.aerogear.jboss.org.smogride.RideListActivity" />
@@ -43,11 +48,7 @@
         <activity
             android:name=".auth.KeyCloakLoginActivity"
             android:label="@string/title_activity_key_cloak_login" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <service

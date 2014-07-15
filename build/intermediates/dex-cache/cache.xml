@@ -2,11 +2,17 @@
 <pre-dex-items>
 
     <item
-        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/classes-d25d63728ed83f7f0930cfcad2f058b18b53d295.jar"
-        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/5.0.77/classes.jar"
+        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/classes-97f76d3840e86664ad25759b48a16bc106384a67.jar"
+        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/org.jboss.aerogear/aerogear-android/1.4.0/classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="80a6f6f2d0dfcfae8c424cf81dcdf7157e7bf4b8"/>
+        sha1="0735690be8a05df9028c126be8b229c05c835e2a"/>
+    <item
+        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-8b02ccb3252e267561d540196100964a63e32170.jar"
+        jar="/home/summers/.m2/repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
     <item
         dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/guava-17.0-68aada4b7c67d544dbb8045a8a273288799c495e.jar"
         jar="/home/summers/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/17.0/9c6ef172e8de35fd8d4d8783e4821e57cdef7445/guava-17.0.jar"
@@ -14,11 +20,17 @@
         revision="20.0.0"
         sha1="9c6ef172e8de35fd8d4d8783e4821e57cdef7445"/>
     <item
-        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-b08bfde5635098476a12801e86eac3f740970599.jar"
-        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        dex="/home/summers/Projects/SmogRide/wear/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-08c3188c5ca601723e59992a1bb839ab76b776be.jar"
+        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/com.android.support/support-v13/20.0.0/libs/internal_impl-20.0.0.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+        sha1="27bbd3982cdfe4468a9bf99c8c773734a9049e33"/>
+    <item
+        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/gson-2.2.4-c935b260d47e943836633fd4add4140509548356.jar"
+        jar="/home/summers/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568"/>
     <item
         dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/classes-b3e27be64b3a3740f1387f34c8dc2508135ca335.jar"
         jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
@@ -26,22 +38,34 @@
         revision="20.0.0"
         sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
     <item
-        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-448ef67bef28a51962a9c120ff9cfcc48bc6f249.jar"
-        jar="/home/summers/Programs/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-b08bfde5635098476a12801e86eac3f740970599.jar"
+        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
     <item
-        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/classes-97f76d3840e86664ad25759b48a16bc106384a67.jar"
-        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/org.jboss.aerogear/aerogear-android/1.4.0/classes.jar"
+        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/classes-d25d63728ed83f7f0930cfcad2f058b18b53d295.jar"
+        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/5.0.77/classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="0735690be8a05df9028c126be8b229c05c835e2a"/>
+        sha1="80a6f6f2d0dfcfae8c424cf81dcdf7157e7bf4b8"/>
     <item
-        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/gson-2.2.4-c935b260d47e943836633fd4add4140509548356.jar"
-        jar="/home/summers/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
+        dex="/home/summers/Projects/SmogRide/wear/build/intermediates/pre-dexed/debug/classes-e261d02d94e8878346512eccd537aca7e6d9e12d.jar"
+        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/com.android.support/support-v13/20.0.0/classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="a60a5e993c98c864010053cb901b7eab25306568"/>
+        sha1="e128103d5281ddd26195a7f980b36d0d005a4e56"/>
+    <item
+        dex="/home/summers/Projects/SmogRide/mobile/build/intermediates/pre-dexed/debug/classes-99892aee2c2f44fb9390bfb8453964e4baac4176.jar"
+        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/org.jboss.aerogear/aerogear-android-sync/1.4.0-SNAPSHOT/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="aa76bb8ca46c1ae4c8466c0dae8e151c5fb5a8f7"/>
+    <item
+        dex="/home/summers/Projects/SmogRide/wear/build/intermediates/pre-dexed/debug/classes-bc8b4bc1bd155c285c969bc982d37671c24f9a0f.jar"
+        jar="/home/summers/Projects/SmogRide/build/intermediates/exploded-aar/com.google.android.support/wearable/1.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="6804efbb78d7facc2e1aa107c7342bee83afae45"/>
 
 </pre-dex-items>

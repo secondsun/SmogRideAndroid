@@ -29,4 +29,5 @@ dependencies {
     compile 'com.google.code.gson:gson:2.2.+'
     compile 'com.google.guava:guava:17.+'
     compile 'org.jboss.aerogear:aerogear-android:1.4.0@aar'
+    compile 'org.jboss.aerogear:aerogear-android-sync:1.4.0-SNAPSHOT@aar'
 }
