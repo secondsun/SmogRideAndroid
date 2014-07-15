@@ -74,7 +74,7 @@ public class RideListFragment extends ListFragment implements LoaderManager.Load
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
-
+        loader.forceLoad();
     }
 
     /**

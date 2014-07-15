@@ -1,8 +1,16 @@
 package smogride.aerogear.jboss.org.smogride;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.app.Activity;
+import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
+import android.database.ContentObserver;
 import android.os.Bundle;
+
+import smogride.aerogear.jboss.org.smogride.auth.AerogearOAuth2AndroidAuthenticator;
+import smogride.aerogear.jboss.org.smogride.content.RideContract;
 
 /**
  * An activity representing a list of Rides. This activity
@@ -77,4 +85,34 @@ public class RideListActivity extends Activity
             startActivity(detailIntent);
         }
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        Bundle settingsBundle = new Bundle();
+        settingsBundle.putBoolean(
+                ContentResolver.SYNC_EXTRAS_MANUAL, true);
+        settingsBundle.putBoolean(
+                ContentResolver.SYNC_EXTRAS_EXPEDITED, true);
+        Account account = CreateSyncAccount(getApplicationContext());
+        ContentResolver.requestSync(account, "smogride.rides", settingsBundle);
+
+    }
+
+    public static Account CreateSyncAccount(Context context) {
+        // Create the account type and default account
+        Account newAccount = new Account("secondsun", AerogearOAuth2AndroidAuthenticator.ACCOUNT_TYPE);
+        // Get an instance of the Android account manager
+        AccountManager accountManager =
+                (AccountManager) context.getSystemService(
+                        ACCOUNT_SERVICE);
+        /*
+         * Add the account and account type, no password or user data
+         * If successful, return the Account object, otherwise report an error.
+         */
+        accountManager.addAccountExplicitly(newAccount, null, null);
+        return newAccount;
+    }
+
 }

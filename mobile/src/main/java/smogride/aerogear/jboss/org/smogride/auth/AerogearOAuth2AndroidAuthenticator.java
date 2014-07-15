@@ -36,11 +36,7 @@ public class AerogearOAuth2AndroidAuthenticator extends AbstractAccountAuthentic
 
     @Override
     public Bundle addAccount(AccountAuthenticatorResponse response, String accountType, String authTokenType, String[] requiredFeatures, Bundle options) throws NetworkErrorException {
-        Bundle toReturn = new Bundle();
-        toReturn.putParcelable(AccountManager.KEY_INTENT, new Intent(context, KeyCloakLoginActivity.class).putExtra(AccountManager.KEY_ACCOUNT_AUTHENTICATOR_RESPONSE, response));
-        toReturn.putParcelable(AccountManager.KEY_ACCOUNT_AUTHENTICATOR_RESPONSE, response);
-
-        return toReturn;
+        return null;
     }
 
     @Override
@@ -50,38 +46,13 @@ public class AerogearOAuth2AndroidAuthenticator extends AbstractAccountAuthentic
 
     @Override
     public Bundle getAuthToken(AccountAuthenticatorResponse response, Account account, String authTokenType, Bundle options) throws NetworkErrorException {
-        final Bundle toReturn = new Bundle();
-        SmogrideApplication app = SmogrideApplication.INSTANCE;
-        AuthzService service = SmogrideApplication.AUTHZ_SERVICE;
-        OAuth2AuthzSession session = service.getAccount(ACCOUNT_TYPE);
-
-        if (session == null ) {
-            toReturn.putString(AccountManager.KEY_ERROR_CODE, "0");
-            toReturn.putString(AccountManager.KEY_ERROR_MESSAGE, "No Session");
-        } else if (session.tokenIsNotExpired()) {
-            toReturn.putString(AccountManager.KEY_ACCOUNT_TYPE, account.type);
-            toReturn.putString(AccountManager.KEY_ACCOUNT_NAME, account.name);
-            toReturn.putString(AccountManager.KEY_AUTHTOKEN, session.getAccessToken());
-        } else try {
-            if (service.fetchAccessToken(ACCOUNT_TYPE, null) != null) {
-                session = service.getAccount(ACCOUNT_TYPE);
-                toReturn.putString(AccountManager.KEY_ACCOUNT_TYPE, account.type);
-                toReturn.putString(AccountManager.KEY_ACCOUNT_NAME, account.name);
-                toReturn.putString(AccountManager.KEY_AUTHTOKEN, session.getAccessToken());
-            } else {
-                toReturn.putString(AccountManager.KEY_ERROR_CODE, "0");
-                toReturn.putString(AccountManager.KEY_ERROR_MESSAGE, "No Session");
-            }
-        } catch (OAuth2AuthorizationException e) {
-            toReturn.putString(AccountManager.KEY_ERROR_CODE, "0");
-            toReturn.putString(AccountManager.KEY_ERROR_MESSAGE, e.getError());
-        }
-        return toReturn;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public String getAuthTokenLabel(String authTokenType) {
-        return "SmogRide Login";
+        throw new UnsupportedOperationException();
+
     }
 
     @Override

@@ -46,35 +46,35 @@ public class SmogrideApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        AuthzConfig config = null;
-        try {
-            config = new AuthzConfig(new URL("http://10.0.2.2:8080/auth"), "keycloak");
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-            throw new RuntimeException("illegal url");
-        }
-        config.setClientId("CLI");
-        config.setAccountId(AerogearOAuth2AndroidAuthenticator.ACCOUNT_TYPE);
-        config.setRedirectURL("http://10.0.2.2:8080/auth");
-        config.setAuthzEndpoint("/realms/smogride/tokens/login");
-        config.setAccessTokenEndpoint("/realms/smogride/tokens/access/codes");
-        config.setClientSecret("8d3f54af-d346-45b8-83f2-a1c336463527");
-        config.setScopes(Lists.newArrayList("user"));
-        config.setType(AuthzTypes.OAUTH2);
-
-        authzModule = new OAuth2AuthzModule(config);
-
-        bindService(new Intent(this, AuthzService.class), new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder service) {
-                 AUTHZ_SERVICE = ((AuthzService.AuthzBinder) service).getService();
-            }
-
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-                AUTHZ_SERVICE = null;
-            }
-        }, BIND_AUTO_CREATE);
+//        AuthzConfig config = null;
+//        try {
+//            config = new AuthzConfig(new URL("http://10.0.2.2:8080/auth"), "keycloak");
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//            throw new RuntimeException("illegal url");
+//        }
+//        config.setClientId("CLI");
+//        config.setAccountId(AerogearOAuth2AndroidAuthenticator.ACCOUNT_TYPE);
+//        config.setRedirectURL("http://10.0.2.2:8080/auth");
+//        config.setAuthzEndpoint("/realms/smogride/tokens/login");
+//        config.setAccessTokenEndpoint("/realms/smogride/tokens/access/codes");
+//        config.setClientSecret("8d3f54af-d346-45b8-83f2-a1c336463527");
+//        config.setScopes(Lists.newArrayList("user"));
+//        config.setType(AuthzTypes.OAUTH2);
+//
+//        authzModule = new OAuth2AuthzModule(config);
+//
+//        bindService(new Intent(this, AuthzService.class), new ServiceConnection() {
+//            @Override
+//            public void onServiceConnected(ComponentName name, IBinder service) {
+//                 AUTHZ_SERVICE = ((AuthzService.AuthzBinder) service).getService();
+//            }
+//
+//            @Override
+//            public void onServiceDisconnected(ComponentName name) {
+//                AUTHZ_SERVICE = null;
+//            }
+//        }, BIND_AUTO_CREATE);
 
         INSTANCE = this;
 

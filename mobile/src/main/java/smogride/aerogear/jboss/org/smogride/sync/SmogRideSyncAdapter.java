@@ -12,6 +12,8 @@ import android.util.Log;
 
 import org.jboss.aerogear.android.Callback;
 import org.jboss.aerogear.android.Pipeline;
+import org.jboss.aerogear.android.impl.pipeline.GsonRequestBuilder;
+import org.jboss.aerogear.android.impl.pipeline.GsonResponseParser;
 import org.jboss.aerogear.android.impl.pipeline.PipeConfig;
 import org.jboss.aerogear.android.pipeline.Pipe;
 
@@ -20,6 +22,7 @@ import java.net.URL;
 import java.util.List;
 
 import smogride.aerogear.jboss.org.smogride.content.RideContract;
+import smogride.aerogear.jboss.org.smogride.util.GsonUtils;
 import smogride.aerogear.jboss.org.smogride.vo.Ride;
 
 /**
@@ -31,16 +34,25 @@ public class SmogRideSyncAdapter extends AbstractThreadedSyncAdapter {
 
     static {
         try {
-            SMOGRIDE_URL = new URL("http://10.0.2.2/smogride/app/v1");
+            SMOGRIDE_URL = new URL("http://10.0.2.2:8080/smogride/app/v1");
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
     }
 
     private final ContentResolver mContentResolver;
-    private final PipeConfig config = new PipeConfig(SMOGRIDE_URL, Ride.class);
-    private final Pipeline pipeline = new Pipeline(SMOGRIDE_URL);
-    private final Pipe<Ride> ridePipe = pipeline.pipe(Ride.class, config);
+    private final PipeConfig config;
+    private final Pipeline pipeline;
+    private final Pipe<Ride> ridePipe;
+    {
+        config = new PipeConfig(SMOGRIDE_URL, Ride.class);
+        config.setRequestBuilder(new GsonRequestBuilder(GsonUtils.GSON));
+        config.setResponseParser(new GsonResponseParser(GsonUtils.GSON));
+        pipeline = new Pipeline(SMOGRIDE_URL);
+        ridePipe = pipeline.pipe(Ride.class, config);
+    }
+
+
 
     /**
      * Set up the sync adapter

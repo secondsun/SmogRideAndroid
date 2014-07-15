@@ -11,6 +11,9 @@ import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 
 import java.lang.reflect.Type;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public final class GsonUtils {
@@ -19,13 +22,19 @@ public final class GsonUtils {
 
 
     private static final GsonBuilder builder;
+    private static final DateFormat FORMAT = new SimpleDateFormat("yyyy-MM-dd");
     public static final Gson GSON;
 
     static {
         builder = new GsonBuilder();
         builder.registerTypeAdapter(Date.class, new JsonDeserializer() {
             public Date deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-                return new Date(json.getAsJsonPrimitive().getAsLong());
+
+                try {
+                    return FORMAT.parse(json.getAsString());
+                } catch (ParseException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
@@ -33,7 +42,7 @@ public final class GsonUtils {
             @Override
             public JsonElement serialize(Date src, Type typeOfSrc, JsonSerializationContext
                     context) {
-                return src == null ? null : new JsonPrimitive(src.getTime());
+                return src == null ? null : new JsonPrimitive(FORMAT.format(src));
             }
         });
         GSON = builder.create();

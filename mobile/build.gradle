@@ -8,7 +8,7 @@ android {
         applicationId "smogride.aerogear.jboss.org.smogride"
         minSdkVersion 17
         targetSdkVersion 20
-        versionCode 1
+        versionCode 1g
         versionName "1.0"
     }
     buildTypes {

@@ -23,13 +23,16 @@ public class RideProvider extends ContentProvider {
 
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
-        if (selection.equals(RideContract.ID)) {
+        if (RideContract.ID.equals(selection)) {
             rideStore.remove(selectionArgs[0]);
+            resolver.notifyChange(uri, null, false);
+            return 1;
+        } else {
+            rideStore.reset();
             resolver.notifyChange(uri, null, false);
             return 1;
         }
 
-        return 0;
     }
 
     @Override
